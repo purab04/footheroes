@@ -127,16 +127,18 @@ export default function Index() {
           <div className="text-center">
             <Badge
               variant="secondary"
-              className="mb-6 bg-primary/10 text-primary border-primary/20"
+              className="mb-6 bg-white/90 text-primary border-primary/20 backdrop-blur-sm"
             >
               <Trophy className="w-3 h-3 mr-1" />
               For Amateur & Local Football
             </Badge>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Your Football
-              <span className="block text-primary">Community Hub</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              Welcome to
+              <span className="block text-primary drop-shadow-lg">
+                FootHeroes
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
               Organize matches, track performance, build teams, and connect with
               your local football community. The ultimate platform for
               grassroots football heroes.
