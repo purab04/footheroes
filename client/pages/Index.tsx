@@ -244,7 +244,7 @@ export default function Index() {
               <h3 className="text-xl font-semibold mb-4">
                 1. Create Your Profile
               </h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Set up your player profile and join or create teams in your
                 area.
               </p>
@@ -253,10 +253,10 @@ export default function Index() {
               <div className="w-16 h-16 bg-football-orange rounded-full flex items-center justify-center mx-auto mb-6">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="text-xl font-semibold mb-4 text-foreground">
                 2. Schedule Matches
               </h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Organize games with other teams and manage your match calendar.
               </p>
             </div>
@@ -264,8 +264,10 @@ export default function Index() {
               <div className="w-16 h-16 bg-football-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">3. Track & Improve</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-4 text-foreground">
+                3. Track & Improve
+              </h3>
+              <p className="text-muted-foreground">
                 Monitor your performance, climb leaderboards, and celebrate
                 achievements.
               </p>
