@@ -28,16 +28,19 @@ const App = () => (
         <BrowserRouter>
           <div className="min-h-screen bg-background">
             <Navigation />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/teams" element={<Teams />} />
-              <Route path="/players" element={<Players />} />
-              <Route path="/matches" element={<Matches />} />
-              <Route path="/leaderboard" element={<Leaderboard />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <main>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/teams" element={<Teams />} />
+                <Route path="/players" element={<Players />} />
+                <Route path="/matches" element={<Matches />} />
+                <Route path="/leaderboard" element={<Leaderboard />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
           </div>
         </BrowserRouter>
       </TooltipProvider>
