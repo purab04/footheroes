@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "football-green": {
+          DEFAULT: "hsl(var(--football-green))",
+          dark: "hsl(var(--football-green-dark))",
+        },
+        "football-orange": {
+          DEFAULT: "hsl(var(--football-orange))",
+          dark: "hsl(var(--football-orange-dark))",
+        },
+        "football-blue": {
+          DEFAULT: "hsl(var(--football-blue))",
+          dark: "hsl(var(--football-blue-dark))",
+        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        info: "hsl(var(--info))",
       },
       borderRadius: {
         lg: "var(--radius)",
