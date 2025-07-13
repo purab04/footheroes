@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Play,
   BarChart3,
@@ -13,7 +13,6 @@ import {
   Search,
   Users,
   Target,
-  ArrowRight,
 } from "lucide-react";
 
 const features = [
@@ -23,9 +22,8 @@ const features = [
     title: "Live Scoring",
     description:
       "Get instant updates on ongoing matches with real-time scoring and match events.",
-    color: "text-football-green",
-    bgColor: "bg-football-green/10",
-    borderColor: "border-football-green/20",
+    color: "bg-football-green",
+    position: { top: "10%", left: "50%" }, // 12 o'clock
   },
   {
     id: 2,
@@ -33,9 +31,8 @@ const features = [
     title: "Match Statistics",
     description:
       "Explore detailed player performances and match outcomes with professional scorecards.",
-    color: "text-football-blue",
-    bgColor: "bg-football-blue/10",
-    borderColor: "border-football-blue/20",
+    color: "bg-football-blue",
+    position: { top: "25%", left: "75%" }, // 2 o'clock
   },
   {
     id: 3,
@@ -43,9 +40,8 @@ const features = [
     title: "Organize Tournaments",
     description:
       "Seamlessly organize tournaments and plan football events better than ever before.",
-    color: "text-football-orange",
-    bgColor: "bg-football-orange/10",
-    borderColor: "border-football-orange/20",
+    color: "bg-football-orange",
+    position: { top: "50%", left: "90%" }, // 3 o'clock
   },
   {
     id: 4,
@@ -53,9 +49,8 @@ const features = [
     title: "Live Streaming",
     description:
       "Get real-time football match updates with integrated live streaming capabilities.",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/20",
+    color: "bg-purple-500",
+    position: { top: "75%", left: "75%" }, // 4 o'clock
   },
   {
     id: 5,
@@ -63,9 +58,8 @@ const features = [
     title: "The Gear Store",
     description:
       "Explore customized football merchandise and equipment with The Gear Store.",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10",
-    borderColor: "border-pink-500/20",
+    color: "bg-pink-500",
+    position: { top: "90%", left: "50%" }, // 6 o'clock
   },
   {
     id: 6,
@@ -73,9 +67,8 @@ const features = [
     title: "Leaderboards",
     description:
       "Track and compare your football stats with other players, showcasing top performances.",
-    color: "text-yellow-600",
-    bgColor: "bg-yellow-600/10",
-    borderColor: "border-yellow-600/20",
+    color: "bg-yellow-600",
+    position: { top: "75%", left: "25%" }, // 8 o'clock
   },
   {
     id: 7,
@@ -83,9 +76,8 @@ const features = [
     title: "FootInsights",
     description:
       "Get in-depth analysis of matches, players and opponents with advanced analytics.",
-    color: "text-cyan-500",
-    bgColor: "bg-cyan-500/10",
-    borderColor: "border-cyan-500/20",
+    color: "bg-cyan-500",
+    position: { top: "50%", left: "10%" }, // 9 o'clock
   },
   {
     id: 8,
@@ -93,9 +85,8 @@ const features = [
     title: "AI Highlights",
     description:
       "Football's AI-Generated Highlights for your matches—no manual edits, just ready-to-share moments!",
-    color: "text-indigo-500",
-    bgColor: "bg-indigo-500/10",
-    borderColor: "border-indigo-500/20",
+    color: "bg-indigo-500",
+    position: { top: "25%", left: "25%" }, // 10 o'clock
   },
   {
     id: 9,
@@ -103,9 +94,8 @@ const features = [
     title: "Player Finder",
     description:
       "Find players, opponent teams, referees and match officials with our advanced search.",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-    borderColor: "border-emerald-500/20",
+    color: "bg-emerald-500",
+    position: { top: "15%", left: "35%" }, // 11 o'clock
   },
   {
     id: 10,
@@ -113,14 +103,14 @@ const features = [
     title: "Football Community",
     description:
       "Enter the world of the entire Football Community and unite with passionate players.",
-    color: "text-rose-500",
-    bgColor: "bg-rose-500/10",
-    borderColor: "border-rose-500/20",
+    color: "bg-rose-500",
+    position: { top: "15%", left: "65%" }, // 1 o'clock
   },
 ];
 
 export function WhyFootHeroes() {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
+  const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
@@ -147,48 +137,159 @@ export function WhyFootHeroes() {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        {/* Interactive Football Layout */}
+        <div className="relative w-full max-w-5xl mx-auto mb-20">
+          {/* Central Football */}
+          <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary via-football-green to-football-blue rounded-full p-8 shadow-2xl">
+              <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center relative overflow-hidden">
+                {/* Football */}
+                <div className="text-8xl md:text-9xl transform transition-transform duration-500 hover:scale-110">
+                  ⚽
+                </div>
+
+                {/* Rotating field lines */}
+                <div className="absolute inset-4 border-2 border-white/20 rounded-full"></div>
+                <div className="absolute inset-8 border border-white/10 rounded-full"></div>
+
+                {/* Center circle */}
+                <div className="absolute inset-1/3 border border-white/30 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Subtle pulsing rings */}
+            <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse"></div>
+            <div
+              className="absolute inset-4 border border-football-green/20 rounded-full animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
+          </div>
+
+          {/* Feature Points */}
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const isHovered = hoveredFeature === feature.id;
+            const isSelected = selectedFeature === feature.id;
 
             return (
-              <Card
-                key={feature.id}
-                className={`group border-0 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-card/50 backdrop-blur-sm ${
-                  isHovered ? "scale-105" : ""
-                }`}
-                onMouseEnter={() => setHoveredFeature(feature.id)}
-                onMouseLeave={() => setHoveredFeature(null)}
-              >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
+              <div key={feature.id} className="absolute">
+                {/* Feature Point */}
+                <div
+                  className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 ${
+                    isHovered || isSelected
+                      ? "scale-150 z-30"
+                      : "scale-100 z-10"
+                  }`}
+                  style={{
+                    top: feature.position.top,
+                    left: feature.position.left,
+                  }}
+                  onMouseEnter={() => setHoveredFeature(feature.id)}
+                  onMouseLeave={() => setHoveredFeature(null)}
+                  onClick={() =>
+                    setSelectedFeature(
+                      selectedFeature === feature.id ? null : feature.id,
+                    )
+                  }
+                >
+                  <div
+                    className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center shadow-xl border-4 border-white dark:border-gray-800 relative transition-all duration-500 ${
+                      isHovered || isSelected
+                        ? "shadow-2xl ring-4 ring-primary/30"
+                        : ""
+                    }`}
+                  >
+                    <Icon
+                      className={`w-8 h-8 text-white transition-all duration-500 ${
+                        isHovered || isSelected ? "scale-110" : ""
+                      }`}
+                    />
+
+                    {/* Glow effect */}
                     <div
-                      className={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110`}
-                    >
-                      <Icon className={`w-6 h-6 ${feature.color}`} />
-                    </div>
-                    <div className="text-right">
-                      <div className="text-xs font-bold text-muted-foreground">
-                        {String(feature.id).padStart(2, "0")}
+                      className={`absolute inset-0 rounded-full transition-all duration-500 ${
+                        isHovered || isSelected
+                          ? "bg-white/20 animate-pulse"
+                          : ""
+                      }`}
+                    ></div>
+                  </div>
+
+                  {/* Feature Number */}
+                  <div
+                    className={`absolute -top-2 -right-2 w-7 h-7 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-xs font-bold border-2 border-gray-200 dark:border-gray-600 transition-all duration-500 ${
+                      isHovered || isSelected
+                        ? "bg-primary text-white border-primary scale-110"
+                        : ""
+                    }`}
+                  >
+                    {String(feature.id).padStart(2, "0")}
+                  </div>
+
+                  {/* Connection Line to Center */}
+                  <div
+                    className={`absolute top-1/2 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-border to-transparent transform -translate-x-1/2 pointer-events-none transition-all duration-500 ${
+                      isHovered || isSelected
+                        ? "h-32 via-primary"
+                        : "opacity-30"
+                    }`}
+                  ></div>
+                </div>
+
+                {/* Feature Details Popup */}
+                {(isHovered || isSelected) && (
+                  <div
+                    className="absolute z-40 w-80 bg-background/95 backdrop-blur-xl rounded-xl shadow-2xl border border-border p-6 transform transition-all duration-500 animate-in slide-in-from-bottom-4"
+                    style={{
+                      top: `calc(${feature.position.top} + 80px)`,
+                      left:
+                        feature.position.left === "50%"
+                          ? "50%"
+                          : parseInt(feature.position.left) > 50
+                            ? `calc(${feature.position.left} - 320px)`
+                            : feature.position.left,
+                      transform:
+                        feature.position.left === "50%"
+                          ? "translateX(-50%)"
+                          : "none",
+                    }}
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div
+                        className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}
+                      >
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg mb-2 text-foreground">
+                          {feature.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {feature.description}
+                        </p>
                       </div>
                     </div>
+
+                    {/* Arrow pointing to feature */}
+                    <div
+                      className="absolute w-4 h-4 bg-background/95 transform rotate-45 border-l border-t border-border"
+                      style={{
+                        top: "-8px",
+                        left:
+                          feature.position.left === "50%"
+                            ? "50%"
+                            : parseInt(feature.position.left) > 50
+                              ? "280px"
+                              : "20px",
+                        transform:
+                          feature.position.left === "50%"
+                            ? "translateX(-50%) rotate(45deg)"
+                            : "rotate(45deg)",
+                      }}
+                    ></div>
                   </div>
-                  <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
-                    {feature.description}
-                  </p>
-                  <div className="flex items-center mt-4 text-xs font-semibold text-primary opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <span>Learn more</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </div>
-                </CardContent>
-              </Card>
+                )}
+              </div>
             );
           })}
         </div>
@@ -231,9 +332,9 @@ export function WhyFootHeroes() {
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience all these features and more with FootHeroes.{" "}
+            Hover over any feature point to learn more.{" "}
             <span className="text-primary font-semibold">
-              Start your journey today.
+              Click to pin details.
             </span>
           </p>
         </div>
