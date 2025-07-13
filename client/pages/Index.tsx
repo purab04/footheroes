@@ -146,13 +146,17 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 px-8 py-3 text-lg"
+                className="bg-primary hover:bg-primary/90 px-8 py-3 text-lg shadow-lg"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Start Playing
+                Get Started Free
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
-                Watch Demo
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm"
+              >
+                Sign In
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
