@@ -103,6 +103,24 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-football-blue/5 to-football-orange/5 pt-16 pb-32">
+        <div className="flex flex-col relative mt-5 min-h-5 min-w-5 w-full">
+          <div className="relative">
+            <video
+              autoPlay
+              muted
+              controls={false}
+              playsInline
+              loop
+              className="w-full h-full object-cover object-center rounded relative flex flex-col mt-5 min-h-5 min-w-5"
+            >
+              <source
+                type="video/mp4"
+                src="https://cdn.builder.io/o/assets%2F5864ef68dddb458fa0d50361ad4fac0e%2F3eae9c35ab7946a0ba49b9cd6ded3c0a?alt=media&token=32b672e4-46ab-4e43-9529-432c7fa02efd&apiKey=5864ef68dddb458fa0d50361ad4fac0e"
+              />
+            </video>
+            <div className="w-full pt-[70.04048582995948%] pointer-events-none text-[0px]" />
+          </div>
+        </div>
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
