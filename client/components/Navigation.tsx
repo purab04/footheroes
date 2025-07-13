@@ -39,7 +39,7 @@ export function Navigation() {
               <div className="absolute inset-0 w-10 h-10 border-2 border-primary/30 rounded-xl animate-ping"></div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black text-sporty-gradient tracking-tight">
+              <span className="text-xl font-black text-foreground tracking-tight bg-gradient-to-r from-primary/90 to-football-blue/80 bg-clip-text text-transparent">
                 FootHeroes
               </span>
               <span className="text-xs text-muted-foreground font-medium -mt-1">
