@@ -117,5 +117,192 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      "SF Pro Display",
+      -apple-system,
+      BlinkMacSystemFont,
+      system-ui,
+      sans-serif;
+  }
+
+  /* Modern Sporty Patterns */
+  .bg-grid-pattern {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 0
+    );
+    background-size: 20px 20px;
+  }
+
+  .bg-hexagon-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff0a' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .bg-circuit-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23ffffff0a' fill-opacity='0.05'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Sporty Animations */
+  @keyframes pulse-sporty {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes bounce-in-sporty {
+    0% {
+      transform: scale(0.3) translateY(100px);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05) translateY(-10px);
+      opacity: 0.8;
+    }
+    70% {
+      transform: scale(0.9) translateY(5px);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-diagonal {
+    0% {
+      transform: translate(-100px, 100px) rotate(-10deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes field-lines {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-pulse-sporty {
+    animation: pulse-sporty 2s infinite;
+  }
+
+  .animate-bounce-in-sporty {
+    animation: bounce-in-sporty 0.8s ease-out;
+  }
+
+  .animate-slide-in-diagonal {
+    animation: slide-in-diagonal 0.6s ease-out;
+  }
+
+  /* Modern Sporty Gradients */
+  .gradient-sporty-primary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--football-green)) 0%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--football-blue)) 100%
+    );
+  }
+
+  .gradient-sporty-secondary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--football-orange)) 0%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--football-green)) 100%
+    );
+  }
+
+  .gradient-text-sporty {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--football-green)),
+      hsl(var(--football-blue))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass Morphism Effect */
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-morphism-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Sporty Shadows */
+  .shadow-sporty {
+    box-shadow:
+      0 4px 6px -1px rgba(74, 222, 128, 0.1),
+      0 2px 4px -1px rgba(74, 222, 128, 0.06),
+      0 0 0 1px rgba(74, 222, 128, 0.05);
+  }
+
+  .shadow-sporty-lg {
+    box-shadow:
+      0 10px 15px -3px rgba(74, 222, 128, 0.1),
+      0 4px 6px -2px rgba(74, 222, 128, 0.05),
+      0 0 0 1px rgba(74, 222, 128, 0.05);
+  }
+
+  /* Modern Typography */
+  .text-sporty-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--football-green)),
+      hsl(var(--football-blue)),
+      hsl(var(--football-orange))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+
+  /* Responsive Grid */
+  .grid-sporty {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Modern Borders */
+  .border-sporty {
+    border-image: linear-gradient(
+        135deg,
+        hsl(var(--football-green)),
+        hsl(var(--football-blue))
+      )
+      1;
+  }
+
+  /* Neon Effect */
+  .neon-sporty {
+    text-shadow:
+      0 0 5px hsl(var(--football-green)),
+      0 0 10px hsl(var(--football-green)),
+      0 0 15px hsl(var(--football-green)),
+      0 0 20px hsl(var(--football-green));
   }
 }
