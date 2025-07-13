@@ -75,30 +75,6 @@ export default function Index() {
     { number: "500+", label: "Local Leagues" },
   ];
 
-  const testimonials = [
-    {
-      name: "Alex Rodriguez",
-      role: "Team Captain",
-      content:
-        "FootHeroes has transformed how we organize our local league. The stats tracking is incredible!",
-      rating: 5,
-    },
-    {
-      name: "Sarah Johnson",
-      role: "League Coordinator",
-      content:
-        "Managing multiple teams and tournaments has never been easier. The platform is intuitive and powerful.",
-      rating: 5,
-    },
-    {
-      name: "Mike Chen",
-      role: "Amateur Player",
-      content:
-        "I love tracking my progress and competing on the leaderboards. It's addictive in the best way!",
-      rating: 5,
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
