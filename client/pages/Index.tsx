@@ -100,7 +100,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-32 min-h-screen">
         {/* Video Background */}
