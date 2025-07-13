@@ -98,6 +98,9 @@ export function Navigation() {
                 );
               })}
               <div className="pt-4 border-t border-gray-200 flex flex-col space-y-2">
+                <div className="flex justify-center mb-2">
+                  <ThemeToggle />
+                </div>
                 <Button variant="outline" size="sm" className="w-full">
                   Sign In
                 </Button>
