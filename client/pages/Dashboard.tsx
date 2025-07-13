@@ -165,7 +165,7 @@ export default function Dashboard() {
                 variant="outline"
                 className="border-primary/30 text-primary font-bold px-4 py-2 animate-pulse-sporty"
               >
-                <Fire className="w-4 h-4 mr-2" />
+                <Flame className="w-4 h-4 mr-2" />
                 On Fire! 🔥
               </Badge>
             </div>
