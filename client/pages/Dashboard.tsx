@@ -23,7 +23,7 @@ import {
   Activity,
   Goal,
   Zap,
-  Fire,
+  Flame,
   Award,
   Timer,
   Sparkles,
