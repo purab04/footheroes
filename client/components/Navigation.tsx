@@ -54,6 +54,7 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Button variant="outline" size="sm">
               Sign In
             </Button>
