@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { WhyFootHeroes } from "@/components/WhyFootHeroes";
 import {
   Trophy,
   Users,
