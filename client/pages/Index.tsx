@@ -164,11 +164,16 @@ export default function Index() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-1">
+                <div
+                  key={index}
+                  className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                >
+                  <div className="text-3xl font-bold text-white mb-1 drop-shadow-lg">
                     {stat.number}
                   </div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  <div className="text-sm text-white/80 drop-shadow-md">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
