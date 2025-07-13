@@ -303,7 +303,7 @@ export default function Dashboard() {
                 <CardTitle className="flex items-center text-2xl font-bold">
                   <Activity className="w-6 h-6 mr-3 text-primary" />
                   Recent Matches
-                  <Fire className="w-5 h-5 ml-2 text-football-orange" />
+                  <Flame className="w-5 h-5 ml-2 text-football-orange" />
                 </CardTitle>
                 <CardDescription className="text-lg">
                   Your latest performance
