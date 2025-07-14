@@ -204,7 +204,7 @@ export function Footer() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-background/50 border border-border/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm"
               />
-              <Button className="gradient-sporty-primary hover:shadow-sporty-lg font-bold text-white border-0 px-6 py-3">
+              <Button className="bg-green-600 hover:bg-green-700 hover:shadow-lg font-bold text-white border-0 px-6 py-3">
                 <Zap className="w-4 h-4 mr-2" />
                 Subscribe
               </Button>
