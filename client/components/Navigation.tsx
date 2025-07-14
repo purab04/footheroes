@@ -86,7 +86,7 @@ export function Navigation() {
 
             <Button
               size="sm"
-              className="gradient-sporty-primary hover:shadow-sporty-lg transition-all duration-300 hover:scale-105 font-bold text-white border-0"
+              className="bg-green-600 hover:bg-green-700 hover:shadow-lg transition-all duration-300 hover:scale-105 font-bold text-white border-0"
             >
               <Zap className="w-4 h-4 mr-2" />
               Get Started
