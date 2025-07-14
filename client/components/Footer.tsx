@@ -246,19 +246,19 @@ export function Footer() {
             <div className="flex items-center space-x-6">
               <Link
                 to="/privacy"
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-muted-foreground hover:text-primary dark:hover:text-primary-foreground transition-colors duration-300 font-medium"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms"
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-muted-foreground hover:text-primary dark:hover:text-primary-foreground transition-colors duration-300 font-medium"
               >
                 Terms of Service
               </Link>
               <Link
                 to="/cookies"
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-muted-foreground hover:text-primary dark:hover:text-primary-foreground transition-colors duration-300 font-medium"
               >
                 Cookie Policy
               </Link>
