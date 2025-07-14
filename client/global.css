@@ -208,30 +208,30 @@
     animation: slide-in-diagonal 0.6s ease-out;
   }
 
-  /* Modern Sporty Gradients */
+  /* Modern Sporty Gradients - Black & White */
   .gradient-sporty-primary {
     background: linear-gradient(
       135deg,
-      hsl(var(--football-green)) 0%,
-      hsl(var(--primary)) 50%,
-      hsl(var(--football-blue)) 100%
+      hsl(var(--football-black)) 0%,
+      hsl(var(--football-gray-dark)) 50%,
+      hsl(var(--primary)) 100%
     );
   }
 
   .gradient-sporty-secondary {
     background: linear-gradient(
       135deg,
-      hsl(var(--football-orange)) 0%,
-      hsl(var(--accent)) 50%,
-      hsl(var(--football-green)) 100%
+      hsl(var(--football-gray)) 0%,
+      hsl(var(--football-gray-light)) 50%,
+      hsl(var(--football-white)) 100%
     );
   }
 
   .gradient-text-sporty {
     background: linear-gradient(
       135deg,
-      hsl(var(--football-green)),
-      hsl(var(--football-blue))
+      hsl(var(--football-black)),
+      hsl(var(--football-gray-dark))
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
