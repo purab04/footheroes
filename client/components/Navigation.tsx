@@ -120,7 +120,7 @@ export function Navigation() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="group flex items-center space-x-3 px-4 py-3 rounded-lg text-foreground/80 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                    className="group flex items-center space-x-3 px-4 py-3 rounded-lg text-foreground/80 hover:text-primary dark:hover:text-primary-foreground hover:bg-primary/10 transition-all duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
