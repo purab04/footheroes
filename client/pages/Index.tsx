@@ -298,13 +298,17 @@ export default function Index() {
           <div className="text-center mb-20">
             <Badge
               variant="outline"
-              className="mb-6 border-orange-500/30 text-orange-600 font-bold px-6 py-2 bg-orange-50 dark:bg-orange-950"
+              className="mb-6 border-orange-500/30 text-orange-600 dark:text-orange-400 font-bold px-6 py-2 bg-orange-50 dark:bg-orange-950/50"
             >
               <Zap className="w-4 h-4 mr-2" />
               Simple Process
             </Badge>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
-              How <span className="text-orange-600">FootHeroes</span> Works
+              How{" "}
+              <span className="text-orange-600 dark:text-orange-400">
+                FootHeroes
+              </span>{" "}
+              Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
               Get started in minutes and transform your local football
