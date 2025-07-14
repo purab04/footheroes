@@ -10,51 +10,51 @@
   */
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 142 69% 58%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 22 93% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 69% 58%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 9%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 215 25% 27%;
-    --sidebar-primary: 142 69% 58%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96.1%;
-    --sidebar-accent-foreground: 215 25% 27%;
-    --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 142 69% 58%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 9%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 89%;
+    --sidebar-ring: 0 0% 9%;
 
-    /* FootHeroes brand colors */
-    --football-green: 142 69% 58%;
-    --football-green-dark: 142 69% 48%;
-    --football-orange: 22 93% 58%;
-    --football-orange-dark: 22 93% 48%;
-    --football-blue: 217 91% 60%;
-    --football-blue-dark: 217 91% 50%;
+    /* FootHeroes black and white theme */
+    --football-black: 0 0% 9%;
+    --football-black-light: 0 0% 20%;
+    --football-white: 0 0% 98%;
+    --football-gray: 0 0% 45%;
+    --football-gray-light: 0 0% 75%;
+    --football-gray-dark: 0 0% 25%;
     --success: 120 70% 50%;
     --warning: 45 93% 58%;
     --info: 200 94% 86%;
