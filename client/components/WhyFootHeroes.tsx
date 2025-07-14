@@ -372,7 +372,7 @@ export function WhyFootHeroes() {
         <div className="text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
             <div className="group">
-              <div className="text-3xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 10+
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -380,7 +380,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 24/7
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -388,7 +388,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 100%
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -396,7 +396,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
                 Free
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -407,7 +407,7 @@ export function WhyFootHeroes() {
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hover over any feature point to learn more.{" "}
-            <span className="text-green-600 font-semibold">
+            <span className="text-green-600 dark:text-green-400 font-semibold">
               Click to pin details.
             </span>
           </p>
