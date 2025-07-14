@@ -432,7 +432,7 @@ export default function Index() {
             <Button
               size="lg"
               variant="outline"
-              className="px-12 py-4 text-lg border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-bold glass-morphism backdrop-blur-xl transform transition-all duration-300 hover:scale-105"
+              className="px-12 py-4 text-lg border-2 border-white/80 text-white bg-black/20 hover:bg-white/20 hover:border-white font-bold backdrop-blur-xl transform transition-all duration-300 hover:scale-105"
             >
               <Clock className="w-6 h-6 mr-3" />
               Schedule Demo
