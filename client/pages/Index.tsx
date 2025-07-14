@@ -231,13 +231,14 @@ export default function Index() {
           <div className="text-center mb-20">
             <Badge
               variant="outline"
-              className="mb-6 border-primary/30 text-primary font-bold px-6 py-2"
+              className="mb-6 border-blue-500/30 text-blue-600 font-bold px-6 py-2 bg-blue-50 dark:bg-blue-950"
             >
               <Target className="w-4 h-4 mr-2" />
               Core Features
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 text-sporty-gradient">
-              Everything You Need for Local Football
+            <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+              Everything You Need for{" "}
+              <span className="text-blue-600">Local Football</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
               From match organization to performance tracking, FootHeroes
