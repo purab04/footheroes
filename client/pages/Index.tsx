@@ -422,8 +422,7 @@ export default function Index() {
             <Link to="/dashboard">
               <Button
                 size="lg"
-                variant="secondary"
-                className="px-12 py-4 text-lg bg-white text-primary hover:bg-gray-100 font-bold border-0 transform transition-all duration-300 hover:scale-110 shadow-2xl"
+                className="px-12 py-4 text-lg bg-green-600 text-white hover:bg-green-700 font-bold border-0 transform transition-all duration-300 hover:scale-110 shadow-2xl"
               >
                 <Medal className="w-6 h-6 mr-3" />
                 Get Started Free
@@ -433,7 +432,7 @@ export default function Index() {
             <Button
               size="lg"
               variant="outline"
-              className="px-12 py-4 text-lg border-2 border-white/30 text-white hover:bg-white hover:text-primary font-bold glass-morphism backdrop-blur-xl transform transition-all duration-300 hover:scale-105"
+              className="px-12 py-4 text-lg border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-bold glass-morphism backdrop-blur-xl transform transition-all duration-300 hover:scale-105"
             >
               <Clock className="w-6 h-6 mr-3" />
               Schedule Demo
