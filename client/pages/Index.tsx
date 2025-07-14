@@ -125,11 +125,11 @@ export default function Index() {
           <div className="text-center animate-bounce-in-sporty">
             <Badge
               variant="secondary"
-              className="mb-6 glass-morphism border-primary/30 text-white backdrop-blur-xl shadow-sporty animate-pulse-sporty"
+              className="mb-6 bg-white/90 dark:bg-black/90 border-white/30 dark:border-black/30 text-black dark:text-white backdrop-blur-xl shadow-sporty animate-pulse-sporty font-semibold"
             >
-              <Trophy className="w-4 h-4 mr-2 text-football-green" />
+              <Trophy className="w-4 h-4 mr-2 text-green-600" />
               For Amateur & Local Football
-              <Sparkles className="w-4 h-4 ml-2 text-football-orange" />
+              <Sparkles className="w-4 h-4 ml-2 text-orange-600" />
             </Badge>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight drop-shadow-2xl">
