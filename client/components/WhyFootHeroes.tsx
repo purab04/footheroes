@@ -22,7 +22,8 @@ const features = [
     title: "Live Scoring",
     description:
       "Get instant updates on ongoing matches with real-time scoring and match events.",
-    color: "bg-football-green",
+    color: "bg-black dark:bg-white",
+    iconColor: "text-white dark:text-black",
     position: { top: "10%", left: "50%" }, // 12 o'clock
   },
   {
@@ -31,7 +32,8 @@ const features = [
     title: "Match Statistics",
     description:
       "Explore detailed player performances and match outcomes with professional scorecards.",
-    color: "bg-football-blue",
+    color: "bg-gray-800 dark:bg-gray-200",
+    iconColor: "text-white dark:text-black",
     position: { top: "25%", left: "75%" }, // 2 o'clock
   },
   {
@@ -40,7 +42,8 @@ const features = [
     title: "Organize Tournaments",
     description:
       "Seamlessly organize tournaments and plan football events better than ever before.",
-    color: "bg-football-orange",
+    color: "bg-black dark:bg-white",
+    iconColor: "text-white dark:text-black",
     position: { top: "50%", left: "90%" }, // 3 o'clock
   },
   {
@@ -49,7 +52,8 @@ const features = [
     title: "Live Streaming",
     description:
       "Get real-time football match updates with integrated live streaming capabilities.",
-    color: "bg-purple-500",
+    color: "bg-gray-600 dark:bg-gray-400",
+    iconColor: "text-white dark:text-black",
     position: { top: "75%", left: "75%" }, // 4 o'clock
   },
   {
@@ -58,7 +62,8 @@ const features = [
     title: "The Gear Store",
     description:
       "Explore customized football merchandise and equipment with The Gear Store.",
-    color: "bg-pink-500",
+    color: "bg-black dark:bg-white",
+    iconColor: "text-white dark:text-black",
     position: { top: "90%", left: "50%" }, // 6 o'clock
   },
   {
@@ -67,7 +72,8 @@ const features = [
     title: "Leaderboards",
     description:
       "Track and compare your football stats with other players, showcasing top performances.",
-    color: "bg-yellow-600",
+    color: "bg-gray-800 dark:bg-gray-200",
+    iconColor: "text-white dark:text-black",
     position: { top: "75%", left: "25%" }, // 8 o'clock
   },
   {
@@ -76,7 +82,8 @@ const features = [
     title: "FootInsights",
     description:
       "Get in-depth analysis of matches, players and opponents with advanced analytics.",
-    color: "bg-cyan-500",
+    color: "bg-black dark:bg-white",
+    iconColor: "text-white dark:text-black",
     position: { top: "50%", left: "10%" }, // 9 o'clock
   },
   {
@@ -85,7 +92,8 @@ const features = [
     title: "AI Highlights",
     description:
       "Football's AI-Generated Highlights for your matches—no manual edits, just ready-to-share moments!",
-    color: "bg-indigo-500",
+    color: "bg-gray-600 dark:bg-gray-400",
+    iconColor: "text-white dark:text-black",
     position: { top: "25%", left: "25%" }, // 10 o'clock
   },
   {
@@ -94,7 +102,8 @@ const features = [
     title: "Player Finder",
     description:
       "Find players, opponent teams, referees and match officials with our advanced search.",
-    color: "bg-emerald-500",
+    color: "bg-black dark:bg-white",
+    iconColor: "text-white dark:text-black",
     position: { top: "15%", left: "35%" }, // 11 o'clock
   },
   {
@@ -103,7 +112,8 @@ const features = [
     title: "Football Community",
     description:
       "Enter the world of the entire Football Community and unite with passionate players.",
-    color: "bg-rose-500",
+    color: "bg-gray-800 dark:bg-gray-200",
+    iconColor: "text-white dark:text-black",
     position: { top: "15%", left: "65%" }, // 1 o'clock
   },
 ];
@@ -122,7 +132,7 @@ export function WhyFootHeroes() {
         <div className="text-center mb-20">
           <Badge
             variant="outline"
-            className="mb-6 border-primary/30 text-primary font-semibold px-6 py-2"
+            className="mb-6 border-border text-foreground font-semibold px-6 py-2"
           >
             <Target className="w-4 h-4 mr-2" />
             Why Choose FootHeroes?
@@ -141,26 +151,42 @@ export function WhyFootHeroes() {
         <div className="relative w-full max-w-5xl mx-auto mb-20">
           {/* Central Football */}
           <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-football-green to-football-blue rounded-full p-8 shadow-2xl">
-              <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center relative overflow-hidden">
-                {/* Football */}
-                <div className="text-8xl md:text-9xl transform transition-transform duration-500 hover:scale-110">
-                  ⚽
+            {/* Football with classic black and white pattern */}
+            <div className="absolute inset-0 rounded-full shadow-2xl overflow-hidden">
+              {/* Base white background */}
+              <div className="w-full h-full bg-white rounded-full relative">
+                {/* Classic football black patches pattern */}
+                <div
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: `
+                    radial-gradient(circle at 30% 30%, black 20%, transparent 21%),
+                    radial-gradient(circle at 70% 30%, black 20%, transparent 21%),
+                    radial-gradient(circle at 50% 60%, black 20%, transparent 21%),
+                    radial-gradient(circle at 20% 70%, black 15%, transparent 16%),
+                    radial-gradient(circle at 80% 70%, black 15%, transparent 16%)
+                  `,
+                  }}
+                ></div>
+
+                {/* Football center with soccer ball emoji */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-8xl md:text-9xl transform transition-transform duration-500 hover:scale-110 hover:rotate-12">
+                    ⚽
+                  </div>
                 </div>
 
-                {/* Rotating field lines */}
-                <div className="absolute inset-4 border-2 border-white/20 rounded-full"></div>
-                <div className="absolute inset-8 border border-white/10 rounded-full"></div>
-
-                {/* Center circle */}
-                <div className="absolute inset-1/3 border border-white/30 rounded-full"></div>
+                {/* Center circle and lines */}
+                <div className="absolute inset-1/3 border-2 border-black/20 rounded-full"></div>
+                <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-black/10"></div>
+                <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-black/10"></div>
               </div>
             </div>
 
             {/* Subtle pulsing rings */}
-            <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 border-2 border-black/10 dark:border-white/10 rounded-full animate-pulse"></div>
             <div
-              className="absolute inset-4 border border-football-green/20 rounded-full animate-pulse"
+              className="absolute inset-4 border border-black/5 dark:border-white/5 rounded-full animate-pulse"
               style={{ animationDelay: "1s" }}
             ></div>
           </div>
@@ -195,12 +221,12 @@ export function WhyFootHeroes() {
                   <div
                     className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center shadow-xl border-4 border-white dark:border-gray-800 relative transition-all duration-500 ${
                       isHovered || isSelected
-                        ? "shadow-2xl ring-4 ring-primary/30"
+                        ? "shadow-2xl ring-4 ring-black/20 dark:ring-white/20"
                         : ""
                     }`}
                   >
                     <Icon
-                      className={`w-8 h-8 text-white transition-all duration-500 ${
+                      className={`w-8 h-8 ${feature.iconColor} transition-all duration-500 ${
                         isHovered || isSelected ? "scale-110" : ""
                       }`}
                     />
@@ -209,7 +235,7 @@ export function WhyFootHeroes() {
                     <div
                       className={`absolute inset-0 rounded-full transition-all duration-500 ${
                         isHovered || isSelected
-                          ? "bg-white/20 animate-pulse"
+                          ? "bg-white/20 dark:bg-black/20 animate-pulse"
                           : ""
                       }`}
                     ></div>
@@ -219,7 +245,7 @@ export function WhyFootHeroes() {
                   <div
                     className={`absolute -top-2 -right-2 w-7 h-7 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-xs font-bold border-2 border-gray-200 dark:border-gray-600 transition-all duration-500 ${
                       isHovered || isSelected
-                        ? "bg-primary text-white border-primary scale-110"
+                        ? "bg-black dark:bg-white text-white dark:text-black border-black dark:border-white scale-110"
                         : ""
                     }`}
                   >
@@ -230,7 +256,7 @@ export function WhyFootHeroes() {
                   <div
                     className={`absolute top-1/2 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-border to-transparent transform -translate-x-1/2 pointer-events-none transition-all duration-500 ${
                       isHovered || isSelected
-                        ? "h-32 via-primary"
+                        ? "h-32 via-black dark:via-white"
                         : "opacity-30"
                     }`}
                   ></div>
@@ -258,7 +284,7 @@ export function WhyFootHeroes() {
                       <div
                         className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}
                       >
-                        <Icon className="w-6 h-6 text-white" />
+                        <Icon className={`w-6 h-6 ${feature.iconColor}`} />
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-2 text-foreground">
@@ -306,7 +332,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-football-orange mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-foreground mb-2 group-hover:scale-110 transition-transform duration-300">
                 24/7
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -314,7 +340,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-football-blue mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                 100%
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -322,7 +348,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-green-500 mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-foreground mb-2 group-hover:scale-110 transition-transform duration-300">
                 Free
               </div>
               <div className="text-sm text-muted-foreground font-medium">
