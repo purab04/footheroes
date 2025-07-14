@@ -148,7 +148,7 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <Button
                 size="lg"
-                className="gradient-sporty-primary hover:shadow-sporty-lg px-10 py-4 text-lg font-bold text-white border-0 transform transition-all duration-300 hover:scale-110 shadow-2xl"
+                className="bg-green-600 hover:bg-green-700 hover:shadow-lg px-10 py-4 text-lg font-bold text-white border-0 transform transition-all duration-300 hover:scale-110 shadow-2xl"
               >
                 <Zap className="w-6 h-6 mr-3" />
                 Get Started Free
@@ -157,7 +157,7 @@ export default function Index() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-10 py-4 text-lg border-3 border-white/30 text-white hover:bg-white hover:text-gray-900 glass-morphism backdrop-blur-xl font-bold transform transition-all duration-300 hover:scale-105"
+                className="px-10 py-4 text-lg border-2 border-white/80 dark:border-white/30 text-white bg-black/20 dark:bg-white/10 hover:bg-white/90 hover:text-black dark:hover:bg-black/90 dark:hover:text-white backdrop-blur-xl font-bold transform transition-all duration-300 hover:scale-105"
               >
                 <Play className="w-6 h-6 mr-3" />
                 Sign In
