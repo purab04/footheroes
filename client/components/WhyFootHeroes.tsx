@@ -149,198 +149,202 @@ export function WhyFootHeroes() {
           </p>
         </div>
 
-                        {/* Interactive Football Layout */}
+        {/* Interactive Football Layout - Properly Centered */}
         <div className="relative w-full max-w-6xl mx-auto mb-20">
-          <div className="flex justify-center items-center min-h-[500px] md:min-h-[600px]">
-            {/* Central Football - Completely Redesigned */}
-            <div className="relative w-80 h-80 md:w-96 md:h-96">
-            {/* Modern Gradient Football */}
-            <div className="absolute inset-0 rounded-full shadow-2xl overflow-hidden">
-              <div
-                className="w-full h-full rounded-full relative"
-                style={{
-                  background: `
-                    radial-gradient(circle at 35% 25%, #000 0%, #333 35%, #000 75%),
-                    conic-gradient(from 0deg, #000 0deg, #fff 30deg, #000 60deg, #fff 90deg, #000 120deg, #fff 150deg, #000 180deg, #fff 210deg, #000 240deg, #fff 270deg, #000 300deg, #fff 330deg, #000 360deg)
-                  `,
-                  backgroundBlendMode: "multiply",
-                }}
-              >
-                {/* Classic Football Pattern Overlay */}
-                <div
-                  className="absolute inset-0 rounded-full"
-                  style={{
-                    background: `
-                      radial-gradient(circle at 40% 30%, transparent 15%, black 16%, black 20%, transparent 21%),
-                      radial-gradient(circle at 60% 30%, transparent 15%, black 16%, black 20%, transparent 21%),
-                      radial-gradient(circle at 50% 55%, transparent 15%, black 16%, black 20%, transparent 21%),
-                      radial-gradient(circle at 30% 65%, transparent 12%, black 13%, black 17%, transparent 18%),
-                      radial-gradient(circle at 70% 65%, transparent 12%, black 13%, black 17%, transparent 18%)
-                    `,
-                    mixBlendMode: "overlay",
-                  }}
-                ></div>
-
-                {/* Center circle highlight */}
-                <div className="absolute inset-1/3 border-2 border-white/30 rounded-full"></div>
-
-                {/* Football center with emoji */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl md:text-9xl transform transition-all duration-500 hover:scale-110 hover:rotate-12 filter drop-shadow-2xl">
-                    ⚽
-                  </div>
-                </div>
-
-                {/* Subtle highlight for 3D effect */}
-                <div
-                  className="absolute top-6 left-6 w-20 h-20 rounded-full opacity-20"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%)",
-                  }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Animated rings with better colors */}
-            <div className="absolute inset-0 border-2 border-green-500/30 dark:border-green-400/30 rounded-full animate-pulse"></div>
-            <div
-              className="absolute inset-4 border border-blue-500/20 dark:border-blue-400/20 rounded-full animate-pulse"
-              style={{ animationDelay: "1s" }}
-            ></div>
-            <div
-              className="absolute inset-8 border border-orange-500/20 dark:border-orange-400/20 rounded-full animate-pulse"
-              style={{ animationDelay: "2s" }}
-            ></div>
-          </div>
-
-          {/* Feature Points - Better Contrast */}
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            const isHovered = hoveredFeature === feature.id;
-            const isSelected = selectedFeature === feature.id;
-
-            return (
-              <div key={feature.id} className="absolute">
-                {/* Feature Point */}
-                <div
-                  className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 ${
-                    isHovered || isSelected
-                      ? "scale-150 z-30"
-                      : "scale-100 z-10"
-                  }`}
-                  style={{
-                    top: feature.position.top,
-                    left: feature.position.left,
-                  }}
-                  onMouseEnter={() => setHoveredFeature(feature.id)}
-                  onMouseLeave={() => setHoveredFeature(null)}
-                  onClick={() =>
-                    setSelectedFeature(
-                      selectedFeature === feature.id ? null : feature.id,
-                    )
-                  }
-                >
+          <div className="flex justify-center items-center min-h-[600px]">
+            {/* Central Football Container */}
+            <div className="relative">
+              {/* Central Football - Completely Redesigned */}
+              <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
+                {/* Modern Gradient Football */}
+                <div className="absolute inset-0 rounded-full shadow-2xl overflow-hidden">
                   <div
-                    className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center shadow-xl border-4 border-white dark:border-gray-800 relative transition-all duration-500 ${
-                      isHovered || isSelected
-                        ? "shadow-2xl ring-4 ring-current/30"
-                        : ""
-                    }`}
-                  >
-                    <Icon
-                      className={`w-8 h-8 ${feature.iconColor} transition-all duration-500 ${
-                        isHovered || isSelected ? "scale-110" : ""
-                      }`}
-                    />
-
-                    {/* Glow effect */}
-                    <div
-                      className={`absolute inset-0 rounded-full transition-all duration-500 ${
-                        isHovered || isSelected
-                          ? "bg-white/20 dark:bg-black/20 animate-pulse"
-                          : ""
-                      }`}
-                    ></div>
-                  </div>
-
-                  {/* Feature Number - Better Contrast */}
-                  <div
-                    className={`absolute -top-2 -right-2 w-7 h-7 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center text-xs font-bold border-2 border-gray-200 dark:border-gray-700 transition-all duration-500 text-black dark:text-white ${
-                      isHovered || isSelected
-                        ? "bg-black dark:bg-white text-white dark:text-black border-black dark:border-white scale-110"
-                        : ""
-                    }`}
-                  >
-                    {String(feature.id).padStart(2, "0")}
-                  </div>
-
-                  {/* Connection Line to Center */}
-                  <div
-                    className={`absolute top-1/2 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-border to-transparent transform -translate-x-1/2 pointer-events-none transition-all duration-500 ${
-                      isHovered || isSelected
-                        ? "h-32 via-foreground dark:via-background"
-                        : "opacity-30"
-                    }`}
-                  ></div>
-                </div>
-
-                {/* Feature Details Popup - Better Contrast */}
-                {(isHovered || isSelected) && (
-                  <div
-                    className="absolute z-40 w-80 bg-background/95 dark:bg-background/95 backdrop-blur-xl rounded-xl shadow-2xl border border-border p-6 transform transition-all duration-500 animate-in slide-in-from-bottom-4"
+                    className="w-full h-full rounded-full relative"
                     style={{
-                      top: `calc(${feature.position.top} + 80px)`,
-                      left:
-                        feature.position.left === "50%"
-                          ? "50%"
-                          : parseInt(feature.position.left) > 50
-                            ? `calc(${feature.position.left} - 320px)`
-                            : feature.position.left,
-                      transform:
-                        feature.position.left === "50%"
-                          ? "translateX(-50%)"
-                          : "none",
+                      background: `
+                        radial-gradient(circle at 35% 25%, #000 0%, #333 35%, #000 75%),
+                        conic-gradient(from 0deg, #000 0deg, #fff 30deg, #000 60deg, #fff 90deg, #000 120deg, #fff 150deg, #000 180deg, #fff 210deg, #000 240deg, #fff 270deg, #000 300deg, #fff 330deg, #000 360deg)
+                      `,
+                      backgroundBlendMode: "multiply",
                     }}
                   >
-                    <div className="flex items-start space-x-4">
-                      <div
-                        className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}
-                      >
-                        <Icon className={`w-6 h-6 ${feature.iconColor}`} />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-lg mb-2 text-foreground">
-                          {feature.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {feature.description}
-                        </p>
+                    {/* Classic Football Pattern Overlay */}
+                    <div
+                      className="absolute inset-0 rounded-full"
+                      style={{
+                        background: `
+                          radial-gradient(circle at 40% 30%, transparent 15%, black 16%, black 20%, transparent 21%),
+                          radial-gradient(circle at 60% 30%, transparent 15%, black 16%, black 20%, transparent 21%),
+                          radial-gradient(circle at 50% 55%, transparent 15%, black 16%, black 20%, transparent 21%),
+                          radial-gradient(circle at 30% 65%, transparent 12%, black 13%, black 17%, transparent 18%),
+                          radial-gradient(circle at 70% 65%, transparent 12%, black 13%, black 17%, transparent 18%)
+                        `,
+                        mixBlendMode: "overlay",
+                      }}
+                    ></div>
+
+                    {/* Center circle highlight */}
+                    <div className="absolute inset-1/3 border-2 border-white/30 rounded-full"></div>
+
+                    {/* Football center with emoji */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-8xl md:text-9xl transform transition-all duration-500 hover:scale-110 hover:rotate-12 filter drop-shadow-2xl">
+                        ⚽
                       </div>
                     </div>
 
-                    {/* Arrow pointing to feature */}
+                    {/* Subtle highlight for 3D effect */}
                     <div
-                      className="absolute w-4 h-4 bg-background/95 dark:bg-background/95 transform rotate-45 border-l border-t border-border"
+                      className="absolute top-6 left-6 w-20 h-20 rounded-full opacity-20"
                       style={{
-                        top: "-8px",
-                        left:
-                          feature.position.left === "50%"
-                            ? "50%"
-                            : parseInt(feature.position.left) > 50
-                              ? "280px"
-                              : "20px",
-                        transform:
-                          feature.position.left === "50%"
-                            ? "translateX(-50%) rotate(45deg)"
-                            : "rotate(45deg)",
+                        background:
+                          "radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%)",
                       }}
                     ></div>
                   </div>
-                )}
+                </div>
+
+                {/* Animated rings with better colors */}
+                <div className="absolute inset-0 border-2 border-green-500/30 dark:border-green-400/30 rounded-full animate-pulse"></div>
+                <div
+                  className="absolute inset-4 border border-blue-500/20 dark:border-blue-400/20 rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <div
+                  className="absolute inset-8 border border-orange-500/20 dark:border-orange-400/20 rounded-full animate-pulse"
+                  style={{ animationDelay: "2s" }}
+                ></div>
               </div>
-            );
-          })}
+
+              {/* Feature Points - Better Contrast */}
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                const isHovered = hoveredFeature === feature.id;
+                const isSelected = selectedFeature === feature.id;
+
+                return (
+                  <div key={feature.id} className="absolute">
+                    {/* Feature Point */}
+                    <div
+                      className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 ${
+                        isHovered || isSelected
+                          ? "scale-150 z-30"
+                          : "scale-100 z-10"
+                      }`}
+                      style={{
+                        top: feature.position.top,
+                        left: feature.position.left,
+                      }}
+                      onMouseEnter={() => setHoveredFeature(feature.id)}
+                      onMouseLeave={() => setHoveredFeature(null)}
+                      onClick={() =>
+                        setSelectedFeature(
+                          selectedFeature === feature.id ? null : feature.id,
+                        )
+                      }
+                    >
+                      <div
+                        className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center shadow-xl border-4 border-white dark:border-gray-800 relative transition-all duration-500 ${
+                          isHovered || isSelected
+                            ? "shadow-2xl ring-4 ring-current/30"
+                            : ""
+                        }`}
+                      >
+                        <Icon
+                          className={`w-8 h-8 ${feature.iconColor} transition-all duration-500 ${
+                            isHovered || isSelected ? "scale-110" : ""
+                          }`}
+                        />
+
+                        {/* Glow effect */}
+                        <div
+                          className={`absolute inset-0 rounded-full transition-all duration-500 ${
+                            isHovered || isSelected
+                              ? "bg-white/20 dark:bg-black/20 animate-pulse"
+                              : ""
+                          }`}
+                        ></div>
+                      </div>
+
+                      {/* Feature Number - Better Contrast */}
+                      <div
+                        className={`absolute -top-2 -right-2 w-7 h-7 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center text-xs font-bold border-2 border-gray-200 dark:border-gray-700 transition-all duration-500 text-black dark:text-white ${
+                          isHovered || isSelected
+                            ? "bg-black dark:bg-white text-white dark:text-black border-black dark:border-white scale-110"
+                            : ""
+                        }`}
+                      >
+                        {String(feature.id).padStart(2, "0")}
+                      </div>
+
+                      {/* Connection Line to Center */}
+                      <div
+                        className={`absolute top-1/2 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-border to-transparent transform -translate-x-1/2 pointer-events-none transition-all duration-500 ${
+                          isHovered || isSelected
+                            ? "h-32 via-foreground dark:via-background"
+                            : "opacity-30"
+                        }`}
+                      ></div>
+                    </div>
+
+                    {/* Feature Details Popup - Better Contrast */}
+                    {(isHovered || isSelected) && (
+                      <div
+                        className="absolute z-40 w-80 bg-background/95 dark:bg-background/95 backdrop-blur-xl rounded-xl shadow-2xl border border-border p-6 transform transition-all duration-500 animate-in slide-in-from-bottom-4"
+                        style={{
+                          top: `calc(${feature.position.top} + 80px)`,
+                          left:
+                            feature.position.left === "50%"
+                              ? "50%"
+                              : parseInt(feature.position.left) > 50
+                                ? `calc(${feature.position.left} - 320px)`
+                                : feature.position.left,
+                          transform:
+                            feature.position.left === "50%"
+                              ? "translateX(-50%)"
+                              : "none",
+                        }}
+                      >
+                        <div className="flex items-start space-x-4">
+                          <div
+                            className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}
+                          >
+                            <Icon className={`w-6 h-6 ${feature.iconColor}`} />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-lg mb-2 text-foreground">
+                              {feature.title}
+                            </h3>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {feature.description}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Arrow pointing to feature */}
+                        <div
+                          className="absolute w-4 h-4 bg-background/95 dark:bg-background/95 transform rotate-45 border-l border-t border-border"
+                          style={{
+                            top: "-8px",
+                            left:
+                              feature.position.left === "50%"
+                                ? "50%"
+                                : parseInt(feature.position.left) > 50
+                                  ? "280px"
+                                  : "20px",
+                            transform:
+                              feature.position.left === "50%"
+                                ? "translateX(-50%) rotate(45deg)"
+                                : "rotate(45deg)",
+                          }}
+                        ></div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Bottom Stats Section - Better Contrast */}
