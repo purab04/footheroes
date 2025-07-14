@@ -224,7 +224,7 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className={`w-12 h-12 bg-muted/50 hover:bg-primary/10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 ${social.color} group`}
+                  className={`w-12 h-12 bg-muted/50 hover:bg-primary/10 dark:hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 ${social.color} group`}
                   aria-label={social.name}
                 >
                   <Icon className="w-5 h-5" />
