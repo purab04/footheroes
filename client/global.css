@@ -214,22 +214,17 @@
     animation: slide-in-diagonal 0.6s ease-out;
   }
 
-  /* Modern Sporty Gradients - Black & White */
+  /* Modern Sporty Gradients - Green Theme */
   .gradient-sporty-primary {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--football-black)) 0%,
-      hsl(var(--football-gray-dark)) 50%,
-      hsl(var(--primary)) 100%
-    );
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
   }
 
   .gradient-sporty-secondary {
     background: linear-gradient(
       135deg,
-      hsl(var(--football-gray)) 0%,
-      hsl(var(--football-gray-light)) 50%,
-      hsl(var(--football-white)) 100%
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted-foreground)) 50%,
+      hsl(var(--foreground)) 100%
     );
   }
 
