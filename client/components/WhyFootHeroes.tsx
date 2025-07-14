@@ -22,8 +22,8 @@ const features = [
     title: "Live Scoring",
     description:
       "Get instant updates on ongoing matches with real-time scoring and match events.",
-    color: "bg-black dark:bg-white",
-    iconColor: "text-white dark:text-black",
+    color: "bg-green-600",
+    iconColor: "text-white",
     position: { top: "10%", left: "50%" }, // 12 o'clock
   },
   {
@@ -42,8 +42,8 @@ const features = [
     title: "Organize Tournaments",
     description:
       "Seamlessly organize tournaments and plan football events better than ever before.",
-    color: "bg-black dark:bg-white",
-    iconColor: "text-white dark:text-black",
+    color: "bg-yellow-600",
+    iconColor: "text-white",
     position: { top: "50%", left: "90%" }, // 3 o'clock
   },
   {
@@ -62,8 +62,8 @@ const features = [
     title: "The Gear Store",
     description:
       "Explore customized football merchandise and equipment with The Gear Store.",
-    color: "bg-black dark:bg-white",
-    iconColor: "text-white dark:text-black",
+    color: "bg-blue-600",
+    iconColor: "text-white",
     position: { top: "90%", left: "50%" }, // 6 o'clock
   },
   {
@@ -82,8 +82,8 @@ const features = [
     title: "FootInsights",
     description:
       "Get in-depth analysis of matches, players and opponents with advanced analytics.",
-    color: "bg-black dark:bg-white",
-    iconColor: "text-white dark:text-black",
+    color: "bg-orange-600",
+    iconColor: "text-white",
     position: { top: "50%", left: "10%" }, // 9 o'clock
   },
   {
@@ -102,8 +102,8 @@ const features = [
     title: "Player Finder",
     description:
       "Find players, opponent teams, referees and match officials with our advanced search.",
-    color: "bg-black dark:bg-white",
-    iconColor: "text-white dark:text-black",
+    color: "bg-purple-600",
+    iconColor: "text-white",
     position: { top: "15%", left: "35%" }, // 11 o'clock
   },
   {
@@ -132,14 +132,14 @@ export function WhyFootHeroes() {
         <div className="text-center mb-20">
           <Badge
             variant="outline"
-            className="mb-6 border-border text-foreground font-semibold px-6 py-2"
+            className="mb-6 border-green-500/30 text-green-600 font-semibold px-6 py-2 bg-green-50 dark:bg-green-950"
           >
             <Target className="w-4 h-4 mr-2" />
             Why Choose FootHeroes?
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Everything You Need in{" "}
-            <span className="text-primary">One Platform</span>
+            <span className="text-green-600">One Platform</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover the comprehensive features that make FootHeroes the
@@ -151,43 +151,89 @@ export function WhyFootHeroes() {
         <div className="relative w-full max-w-5xl mx-auto mb-20">
           {/* Central Football */}
           <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
-            {/* Football with classic black and white pattern */}
+            {/* Modern Football Design */}
             <div className="absolute inset-0 rounded-full shadow-2xl overflow-hidden">
-              {/* Base white background */}
-              <div className="w-full h-full bg-white rounded-full relative">
-                {/* Classic football black patches pattern */}
+              {/* 3D Football Effect */}
+              <div className="w-full h-full relative">
+                {/* Base gradient background */}
                 <div
-                  className="absolute inset-0 rounded-full"
+                  className="w-full h-full rounded-full relative"
                   style={{
                     background: `
-                    radial-gradient(circle at 30% 30%, black 20%, transparent 21%),
-                    radial-gradient(circle at 70% 30%, black 20%, transparent 21%),
-                    radial-gradient(circle at 50% 60%, black 20%, transparent 21%),
-                    radial-gradient(circle at 20% 70%, black 15%, transparent 16%),
-                    radial-gradient(circle at 80% 70%, black 15%, transparent 16%)
+                    radial-gradient(circle at 30% 30%, #fff 0%, #f0f0f0 35%, #e0e0e0 70%, #d0d0d0 100%),
+                    radial-gradient(circle at 70% 70%, rgba(0,0,0,0.1) 0%, transparent 50%)
+                  `,
+                    boxShadow: `
+                    inset -20px -20px 40px rgba(0,0,0,0.1),
+                    inset 20px 20px 40px rgba(255,255,255,0.9),
+                    0 20px 40px rgba(0,0,0,0.2)
                   `,
                   }}
-                ></div>
+                >
+                  {/* Classic football pentagon patterns */}
+                  <div
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background: `
+                      radial-gradient(circle at 40% 25%, black 12%, transparent 13%),
+                      radial-gradient(circle at 60% 25%, black 12%, transparent 13%),
+                      radial-gradient(circle at 30% 50%, black 12%, transparent 13%),
+                      radial-gradient(circle at 70% 50%, black 12%, transparent 13%),
+                      radial-gradient(circle at 50% 70%, black 12%, transparent 13%)
+                    `,
+                    }}
+                  ></div>
 
-                {/* Football center with soccer ball emoji */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl md:text-9xl transform transition-transform duration-500 hover:scale-110 hover:rotate-12">
-                    ⚽
+                  {/* Hexagon pattern overlay */}
+                  <div
+                    className="absolute inset-0 rounded-full opacity-60"
+                    style={{
+                      background: `
+                      conic-gradient(from 0deg at 50% 50%, 
+                        transparent 0deg, 
+                        black 60deg, 
+                        transparent 72deg,
+                        transparent 108deg,
+                        black 168deg,
+                        transparent 180deg,
+                        transparent 216deg,
+                        black 276deg,
+                        transparent 288deg,
+                        transparent 324deg
+                      )
+                    `,
+                      clipPath: "circle(35% at 50% 50%)",
+                    }}
+                  ></div>
+
+                  {/* Football center highlight */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-8xl md:text-9xl transform transition-all duration-500 hover:scale-110 hover:rotate-12 filter drop-shadow-lg">
+                      ⚽
+                    </div>
                   </div>
-                </div>
 
-                {/* Center circle and lines */}
-                <div className="absolute inset-1/3 border-2 border-black/20 rounded-full"></div>
-                <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-black/10"></div>
-                <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-black/10"></div>
+                  {/* Shine effect */}
+                  <div
+                    className="absolute top-4 left-4 w-16 h-16 rounded-full opacity-30"
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%)",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
 
-            {/* Subtle pulsing rings */}
-            <div className="absolute inset-0 border-2 border-black/10 dark:border-white/10 rounded-full animate-pulse"></div>
+            {/* Animated rings with colors */}
+            <div className="absolute inset-0 border-2 border-green-500/20 rounded-full animate-pulse"></div>
             <div
-              className="absolute inset-4 border border-black/5 dark:border-white/5 rounded-full animate-pulse"
+              className="absolute inset-4 border border-blue-500/20 rounded-full animate-pulse"
               style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute inset-8 border border-orange-500/20 rounded-full animate-pulse"
+              style={{ animationDelay: "2s" }}
             ></div>
           </div>
 
@@ -221,7 +267,7 @@ export function WhyFootHeroes() {
                   <div
                     className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center shadow-xl border-4 border-white dark:border-gray-800 relative transition-all duration-500 ${
                       isHovered || isSelected
-                        ? "shadow-2xl ring-4 ring-black/20 dark:ring-white/20"
+                        ? "shadow-2xl ring-4 ring-current/30"
                         : ""
                     }`}
                   >
@@ -256,7 +302,7 @@ export function WhyFootHeroes() {
                   <div
                     className={`absolute top-1/2 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-border to-transparent transform -translate-x-1/2 pointer-events-none transition-all duration-500 ${
                       isHovered || isSelected
-                        ? "h-32 via-black dark:via-white"
+                        ? "h-32 via-current"
                         : "opacity-30"
                     }`}
                   ></div>
@@ -324,7 +370,7 @@ export function WhyFootHeroes() {
         <div className="text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
             <div className="group">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 10+
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -332,7 +378,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-foreground mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 24/7
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -340,7 +386,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 100%
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -348,7 +394,7 @@ export function WhyFootHeroes() {
               </div>
             </div>
             <div className="group">
-              <div className="text-3xl font-bold text-foreground mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
                 Free
               </div>
               <div className="text-sm text-muted-foreground font-medium">
@@ -359,7 +405,7 @@ export function WhyFootHeroes() {
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hover over any feature point to learn more.{" "}
-            <span className="text-primary font-semibold">
+            <span className="text-green-600 font-semibold">
               Click to pin details.
             </span>
           </p>
