@@ -48,13 +48,16 @@
     --sidebar-border: 0 0% 89%;
     --sidebar-ring: 0 0% 9%;
 
-    /* FootHeroes black and white theme */
+    /* FootHeroes black and white theme with color accents */
     --football-black: 0 0% 9%;
     --football-black-light: 0 0% 20%;
     --football-white: 0 0% 98%;
     --football-gray: 0 0% 45%;
     --football-gray-light: 0 0% 75%;
     --football-gray-dark: 0 0% 25%;
+    --football-green: 142 69% 58%;
+    --football-blue: 217 91% 60%;
+    --football-orange: 22 93% 58%;
     --success: 120 70% 50%;
     --warning: 45 93% 58%;
     --info: 200 94% 86%;
