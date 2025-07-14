@@ -15,6 +15,7 @@ import Teams from "./pages/Teams";
 import Players from "./pages/Players";
 import Matches from "./pages/Matches";
 import Leaderboard from "./pages/Leaderboard";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
