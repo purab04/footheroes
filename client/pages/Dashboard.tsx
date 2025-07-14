@@ -459,15 +459,15 @@ export default function Dashboard() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button className="w-full justify-start bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 font-semibold">
+                <Button className="w-full justify-start bg-primary/10 hover:bg-primary/20 text-primary dark:text-primary-foreground border border-primary/20 font-semibold">
                   <Users className="w-4 h-4 mr-3" />
                   Find Teams
                 </Button>
-                <Button className="w-full justify-start bg-football-orange/10 hover:bg-football-orange/20 text-football-orange border border-football-orange/20 font-semibold">
+                <Button className="w-full justify-start bg-orange-600/10 hover:bg-orange-600/20 text-orange-600 dark:text-orange-400 border border-orange-600/20 dark:border-orange-400/20 font-semibold">
                   <Calendar className="w-4 h-4 mr-3" />
                   Create Match
                 </Button>
-                <Button className="w-full justify-start bg-football-blue/10 hover:bg-football-blue/20 text-football-blue border border-football-blue/20 font-semibold">
+                <Button className="w-full justify-start bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-600/20 dark:border-blue-400/20 font-semibold">
                   <Trophy className="w-4 h-4 mr-3" />
                   View Stats
                 </Button>
