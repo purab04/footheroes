@@ -325,7 +325,7 @@ export default function Index() {
                 title: "Schedule Matches",
                 description:
                   "Organize games with other teams and manage your match calendar.",
-                color: "bg-football-orange",
+                color: "bg-foreground",
               },
               {
                 step: "03",
@@ -333,7 +333,7 @@ export default function Index() {
                 title: "Track & Improve",
                 description:
                   "Monitor your performance, climb leaderboards, and celebrate achievements.",
-                color: "bg-football-blue",
+                color: "bg-primary",
               },
             ].map((step, index) => {
               const Icon = step.icon;
