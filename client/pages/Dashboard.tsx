@@ -378,7 +378,9 @@ export default function Dashboard() {
                 <div>
                   <div className="flex justify-between text-sm mb-3">
                     <span className="font-semibold">Matches Played</span>
-                    <span className="font-bold text-football-orange">8/16</span>
+                    <span className="font-bold text-orange-600 dark:text-orange-400">
+                      8/16
+                    </span>
                   </div>
                   <Progress value={50} className="h-3 bg-muted/30" />
                   <p className="text-xs text-muted-foreground mt-2">
@@ -388,7 +390,9 @@ export default function Dashboard() {
                 <div>
                   <div className="flex justify-between text-sm mb-3">
                     <span className="font-semibold">Win Rate</span>
-                    <span className="font-bold text-green-500">75%</span>
+                    <span className="font-bold text-green-600 dark:text-green-400">
+                      75%
+                    </span>
                   </div>
                   <Progress value={75} className="h-3 bg-muted/30" />
                   <p className="text-xs text-muted-foreground mt-2">
