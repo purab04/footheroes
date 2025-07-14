@@ -14,6 +14,48 @@ export function createServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
+  // API root endpoint
+  app.get("/api", (_req, res) => {
+    res.json({
+      message: "FootHeroes API",
+      version: "1.0.0",
+      endpoints: {
+        auth: {
+          register: "POST /api/auth/register",
+          login: "POST /api/auth/login",
+          logout: "POST /api/auth/logout",
+          me: "GET /api/auth/me",
+        },
+        users: {
+          profile: "GET /api/users/:id/profile",
+          update: "PUT /api/users/:id",
+          stats: "GET /api/users/:id/stats",
+          matches: "GET /api/users/:id/matches",
+        },
+        teams: {
+          list: "GET /api/teams",
+          get: "GET /api/teams/:id",
+          create: "POST /api/teams",
+          join: "POST /api/teams/:id/join",
+          leave: "POST /api/teams/:id/leave",
+          matches: "GET /api/teams/:id/matches",
+        },
+        matches: {
+          list: "GET /api/matches",
+          get: "GET /api/matches/:id",
+          create: "POST /api/matches",
+          update: "PUT /api/matches/:id",
+          delete: "DELETE /api/matches/:id",
+        },
+        leaderboard: {
+          players: "GET /api/leaderboard",
+          teams: "GET /api/leaderboard/teams",
+        },
+        dashboard: "GET /api/dashboard",
+      },
+    });
+  });
+
   // Basic health check endpoints
   app.get("/api/ping", (_req, res) => {
     res.json({ message: "FootHeroes API server is running!" });
