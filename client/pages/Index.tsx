@@ -134,7 +134,7 @@ export default function Index() {
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight drop-shadow-2xl">
               Welcome to
-              <span className="block text-sporty-gradient neon-sporty">
+              <span className="block text-white drop-shadow-2xl">
                 FootHeroes
               </span>
             </h1>
