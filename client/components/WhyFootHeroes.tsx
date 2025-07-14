@@ -132,14 +132,16 @@ export function WhyFootHeroes() {
         <div className="text-center mb-20">
           <Badge
             variant="outline"
-            className="mb-6 border-green-500/30 text-green-600 font-semibold px-6 py-2 bg-green-50 dark:bg-green-950"
+            className="mb-6 border-green-500/30 text-green-600 dark:text-green-400 font-semibold px-6 py-2 bg-green-50 dark:bg-green-950/50"
           >
             <Target className="w-4 h-4 mr-2" />
             Why Choose FootHeroes?
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Everything You Need in{" "}
-            <span className="text-green-600">One Platform</span>
+            <span className="text-green-600 dark:text-green-400">
+              One Platform
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover the comprehensive features that make FootHeroes the
