@@ -318,6 +318,7 @@ export default function Index() {
                 description:
                   "Set up your player profile and join or create teams in your area.",
                 color: "bg-primary",
+                iconColor: "text-primary-foreground",
               },
               {
                 step: "02",
@@ -326,6 +327,7 @@ export default function Index() {
                 description:
                   "Organize games with other teams and manage your match calendar.",
                 color: "bg-foreground",
+                iconColor: "text-background",
               },
               {
                 step: "03",
@@ -334,6 +336,7 @@ export default function Index() {
                 description:
                   "Monitor your performance, climb leaderboards, and celebrate achievements.",
                 color: "bg-primary",
+                iconColor: "text-primary-foreground",
               },
             ].map((step, index) => {
               const Icon = step.icon;
@@ -347,7 +350,7 @@ export default function Index() {
                     <div
                       className={`w-20 h-20 ${step.color} rounded-2xl flex items-center justify-center mx-auto shadow-sporty-lg group-hover:scale-110 transition-all duration-300`}
                     >
-                      <Icon className="w-10 h-10 text-white" />
+                      <Icon className={`w-10 h-10 ${step.iconColor}`} />
                     </div>
                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center text-xs font-black text-primary">
                       {step.step}
