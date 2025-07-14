@@ -318,8 +318,8 @@ export default function Index() {
                 title: "Create Your Profile",
                 description:
                   "Set up your player profile and join or create teams in your area.",
-                color: "bg-primary",
-                iconColor: "text-primary-foreground",
+                color: "bg-green-600",
+                iconColor: "text-white",
               },
               {
                 step: "02",
@@ -327,8 +327,8 @@ export default function Index() {
                 title: "Schedule Matches",
                 description:
                   "Organize games with other teams and manage your match calendar.",
-                color: "bg-foreground",
-                iconColor: "text-background",
+                color: "bg-blue-600",
+                iconColor: "text-white",
               },
               {
                 step: "03",
@@ -336,8 +336,8 @@ export default function Index() {
                 title: "Track & Improve",
                 description:
                   "Monitor your performance, climb leaderboards, and celebrate achievements.",
-                color: "bg-primary",
-                iconColor: "text-primary-foreground",
+                color: "bg-orange-600",
+                iconColor: "text-white",
               },
             ].map((step, index) => {
               const Icon = step.icon;
