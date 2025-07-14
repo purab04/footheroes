@@ -14,8 +14,8 @@ export function createServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
-  // API root endpoint
-  app.get("/api", (_req, res) => {
+  // API info endpoint (for programmatic access)
+  app.get("/api/info", (_req, res) => {
     res.json({
       message: "FootHeroes API",
       version: "1.0.0",
