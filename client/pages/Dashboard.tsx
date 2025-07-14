@@ -163,7 +163,7 @@ export default function Dashboard() {
             <div className="ml-auto">
               <Badge
                 variant="outline"
-                className="border-primary/30 text-primary font-bold px-4 py-2 animate-pulse-sporty"
+                className="border-primary/30 text-primary dark:text-primary-foreground font-bold px-4 py-2 animate-pulse-sporty bg-primary/5 dark:bg-primary/20"
               >
                 <Flame className="w-4 h-4 mr-2" />
                 On Fire! 🔥
