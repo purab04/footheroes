@@ -371,7 +371,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 gradient-sporty-primary text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-black via-gray-800 to-gray-900 text-white relative overflow-hidden">
         {/* Dynamic Background Elements */}
         <div className="absolute inset-0 bg-hexagon-pattern opacity-10"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-black/10 to-black/20"></div>
