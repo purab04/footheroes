@@ -150,9 +150,9 @@ export function WhyFootHeroes() {
         </div>
 
         {/* Interactive Football Layout */}
-        <div className="relative w-full max-w-5xl mx-auto mb-20">
+        <div className="relative w-full max-w-6xl mx-auto mb-20 flex justify-center items-center">
           {/* Central Football - Completely Redesigned */}
-          <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
+          <div className="relative w-80 h-80 md:w-96 md:h-96">
             {/* Modern Gradient Football */}
             <div className="absolute inset-0 rounded-full shadow-2xl overflow-hidden">
               <div
