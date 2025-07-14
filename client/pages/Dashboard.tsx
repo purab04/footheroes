@@ -404,7 +404,7 @@ export default function Dashboard() {
                 <CardTitle className="flex items-center text-xl font-bold">
                   <Medal className="w-5 h-5 mr-2 text-primary" />
                   Top Scorers
-                  <Award className="w-5 h-5 ml-2 text-yellow-500" />
+                  <Award className="w-5 h-5 ml-2 text-yellow-600 dark:text-yellow-400" />
                 </CardTitle>
                 <CardDescription>League leaderboard</CardDescription>
               </CardHeader>
