@@ -58,7 +58,7 @@ export function Navigation() {
                   to={item.href}
                   className="group relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10"
                 >
-                  <div className="flex items-center space-x-2 text-foreground/80 group-hover:text-primary transition-colors duration-300">
+                  <div className="flex items-center space-x-2 text-foreground/80 group-hover:text-primary dark:group-hover:text-primary-foreground transition-colors duration-300">
                     <Icon className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
                     <span className="font-semibold">{item.name}</span>
                   </div>
