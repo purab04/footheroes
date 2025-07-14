@@ -270,7 +270,7 @@ export function Footer() {
         <div className="fixed bottom-8 right-8 z-50">
           <Button
             size="lg"
-            className="gradient-sporty-primary hover:shadow-sporty-lg rounded-full w-14 h-14 shadow-2xl transform transition-all duration-300 hover:scale-110"
+            className="bg-green-600 hover:bg-green-700 hover:shadow-lg rounded-full w-14 h-14 shadow-2xl transform transition-all duration-300 hover:scale-110"
           >
             <Zap className="w-6 h-6 text-white" />
           </Button>
