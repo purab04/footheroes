@@ -91,7 +91,7 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">Phone Support</p>
-                    <p className="text-muted-foreground">+44 20 1234 5678</p>
+                    <p className="text-muted-foreground">+(91) 7007502021</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -99,8 +99,22 @@ export default function Contact() {
                   <div>
                     <p className="font-medium">Headquarters</p>
                     <p className="text-muted-foreground">
-                      London, United Kingdom
+                      Lucknow, Uttar Pradesh East
                     </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Linkedin className="h-5 w-5 text-primary" />
+                  <div>
+                    <p className="font-medium">Connect with us</p>
+                    <a
+                      href="https://www.linkedin.com/in/purab-awasthi004/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      LinkedIn Profile
+                    </a>
                   </div>
                 </div>
               </CardContent>
