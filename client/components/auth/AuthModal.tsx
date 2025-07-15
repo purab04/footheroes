@@ -111,6 +111,14 @@ export function AuthModal({
     }
   };
 
+  const handleGoogleAuth = () => {
+    toast({
+      title: "Google Sign-in",
+      description:
+        "Google authentication will be available soon! For now, please use email registration.",
+    });
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
