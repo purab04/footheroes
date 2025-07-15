@@ -353,6 +353,25 @@ export function AuthModal({
                 {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Create Account
               </Button>
+
+              <div className="relative my-4">
+                <Separator className="my-4" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="bg-background px-2 text-xs text-muted-foreground">
+                    OR
+                  </span>
+                </div>
+              </div>
+
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={handleGoogleAuth}
+              >
+                <Chrome className="mr-2 h-4 w-4" />
+                Sign up with Google
+              </Button>
             </form>
           </TabsContent>
         </Tabs>
