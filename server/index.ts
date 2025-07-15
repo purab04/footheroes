@@ -6,6 +6,7 @@ import { teamRoutes } from "./routes/teams";
 import { matchRoutes } from "./routes/matches";
 import { userRoutes } from "./routes/users";
 import { healthRoutes } from "./routes/health";
+import { liveRoutes } from "./routes/live";
 
 export function createServer() {
   const app = express();
