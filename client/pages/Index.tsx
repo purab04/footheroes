@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,7 +12,6 @@ import { Badge } from "@/components/ui/badge";
 import { WhyFootHeroes } from "@/components/WhyFootHeroes";
 import { AuthModal } from "@/components/auth/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
-import { Link } from "react-router-dom";
 import {
   Trophy,
   Users,
