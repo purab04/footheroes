@@ -57,7 +57,7 @@ export function getAuthToken(): string | null {
 
 // Base API client
 class ApiClient {
-  private baseUrl = "/api";
+  private baseUrl = API_CONFIG.BASE_URL;
 
   private async request<T = any>(
     endpoint: string,
