@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Teams from "./pages/Teams";
