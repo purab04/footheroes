@@ -320,6 +320,97 @@ class FootHeroesDatabase {
     this.userSessions.delete(token);
   }
 
+  // Shareable links methods
+  createShareableLink(
+    matchId: string,
+    allowJoin = false,
+    allowView = true,
+  ): string {
+    const shareCode = this.generateId() + this.generateId(); // longer code
+    const link: ShareableMatchLink = {
+      matchId,
+      shareCode,
+      allowJoin,
+      allowView,
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
+    };
+    this.shareableLinks.set(shareCode, link);
+
+    // Update match with shareable link
+    const match = this.matches.get(matchId);
+    if (match) {
+      const updatedMatch = {
+        ...match,
+        shareableLink: shareCode,
+        updatedAt: new Date(),
+      };
+      this.matches.set(matchId, updatedMatch);
+    }
+
+    return shareCode;
+  }
+
+  getShareableLink(shareCode: string): ShareableMatchLink | undefined {
+    const link = this.shareableLinks.get(shareCode);
+    if (link && link.expiresAt && link.expiresAt < new Date()) {
+      this.shareableLinks.delete(shareCode);
+      return undefined;
+    }
+    return link;
+  }
+
+  // Live match data methods
+  updateLiveMatchData(matchId: string, liveData: Partial<LiveMatchData>): void {
+    const existing = this.liveMatchData.get(matchId) || {
+      currentMinute: 0,
+      period: "first-half" as const,
+      isActive: false,
+      lastUpdate: new Date(),
+    };
+
+    const updated = {
+      ...existing,
+      ...liveData,
+      lastUpdate: new Date(),
+    };
+
+    this.liveMatchData.set(matchId, updated);
+
+    // Update match status if needed
+    const match = this.matches.get(matchId);
+    if (match && updated.isActive && match.status === "scheduled") {
+      this.updateMatch(matchId, { status: "live" });
+    }
+  }
+
+  getLiveMatchData(matchId: string): LiveMatchData | undefined {
+    return this.liveMatchData.get(matchId);
+  }
+
+  addLiveEvent(
+    matchId: string,
+    event: Omit<MatchEvent, "id" | "createdAt">,
+  ): MatchEvent {
+    const id = this.generateId();
+    const newEvent: MatchEvent = {
+      ...event,
+      id,
+      createdAt: new Date(),
+    };
+
+    const events = this.matchEvents.get(matchId) || [];
+    events.push(newEvent);
+    this.matchEvents.set(matchId, events);
+
+    // Update live data current minute
+    this.updateLiveMatchData(matchId, {
+      currentMinute: event.minute,
+      isActive: true,
+    });
+
+    return newEvent;
+  }
+
   // Utility methods
   private generateId(): string {
     return Math.random().toString(36).substr(2, 9);
