@@ -18,7 +18,8 @@ import {
 } from "@/components/ui/select";
 import { useAuth } from "@/contexts/AuthContext";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Loader2 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { Loader2, Chrome } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface AuthModalProps {
