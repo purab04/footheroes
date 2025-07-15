@@ -235,6 +235,34 @@ export interface CreateMatchRequest {
   scheduledAt: Date;
   duration: number;
   location: string;
+  gameMode: GameMode;
+}
+
+export interface UpdateUserProfileRequest {
+  firstName?: string;
+  lastName?: string;
+  position?: PlayerPosition;
+  skillLevel?: SkillLevel;
+  location?: string;
+  bio?: string;
+  avatar?: string;
+}
+
+export interface ShareableMatchLink {
+  matchId: string;
+  shareCode: string;
+  expiresAt?: Date;
+  allowJoin: boolean;
+  allowView: boolean;
+}
+
+export interface LiveEventRequest {
+  type: MatchEventType;
+  playerId: string;
+  teamId: string;
+  minute: number;
+  description?: string;
+  additionalData?: Record<string, any>;
 }
 
 export interface UpdateMatchRequest {
