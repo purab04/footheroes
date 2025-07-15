@@ -64,6 +64,9 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // Health and monitoring routes
+  app.use("/api", healthRoutes);
+
   // FootHeroes API routes
   app.use("/api/auth", authRoutes);
   app.use("/api/teams", teamRoutes);
