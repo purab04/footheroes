@@ -139,12 +139,17 @@ export default function Players() {
               />
             </div>
             <div className="flex gap-2">
-              <Select value={positionFilter} onValueChange={setPositionFilter}>
+              <Select
+                value={positionFilter || "all"}
+                onValueChange={(value) =>
+                  setPositionFilter(value === "all" ? "" : value)
+                }
+              >
                 <SelectTrigger className="w-40">
                   <SelectValue placeholder="Position" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Positions</SelectItem>
+                  <SelectItem value="all">All Positions</SelectItem>
                   <SelectItem value="goalkeeper">Goalkeeper</SelectItem>
                   <SelectItem value="defender">Defender</SelectItem>
                   <SelectItem value="midfielder">Midfielder</SelectItem>
