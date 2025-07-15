@@ -32,6 +32,7 @@ import {
   SearchFilters,
   MatchFilters,
 } from "@shared/types";
+import { API_CONFIG, STORAGE_KEYS } from "./config";
 
 // Auth token management
 let authToken: string | null = null;
@@ -39,9 +40,9 @@ let authToken: string | null = null;
 export function setAuthToken(token: string | null): void {
   authToken = token;
   if (token) {
-    localStorage.setItem("footheroes_token", token);
+    localStorage.setItem(STORAGE_KEYS.AUTH_TOKEN, token);
   } else {
-    localStorage.removeItem("footheroes_token");
+    localStorage.removeItem(STORAGE_KEYS.AUTH_TOKEN);
   }
 }
 
@@ -49,7 +50,7 @@ export function getAuthToken(): string | null {
   if (authToken) return authToken;
 
   if (typeof window !== "undefined") {
-    authToken = localStorage.getItem("footheroes_token");
+    authToken = localStorage.getItem(STORAGE_KEYS.AUTH_TOKEN);
   }
   return authToken;
 }
