@@ -66,18 +66,32 @@ export default function Teams() {
     fetchTeams();
   }, [filters]);
 
-  const fetchTeams = async () => {
+  const fetchTeams = async (retryCount = 0) => {
     try {
       setIsLoading(true);
       const response = await api.getTeams(filters);
       if (response.success && response.data) {
         setTeams(response.data);
+      } else {
+        throw new Error(response.error || "Failed to load teams");
       }
     } catch (error) {
       console.error("Failed to fetch teams:", error);
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
+
+      // Retry logic for network errors
+      if (
+        retryCount < 2 &&
+        (errorMessage.includes("Network") || errorMessage.includes("fetch"))
+      ) {
+        setTimeout(() => fetchTeams(retryCount + 1), 2000 * (retryCount + 1));
+        return;
+      }
+
       toast({
-        title: "Error",
-        description: "Failed to load teams",
+        title: "Error Loading Teams",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
