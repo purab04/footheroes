@@ -5,6 +5,7 @@ import { authRoutes } from "./routes/auth";
 import { teamRoutes } from "./routes/teams";
 import { matchRoutes } from "./routes/matches";
 import { userRoutes } from "./routes/users";
+import { healthRoutes } from "./routes/health";
 
 export function createServer() {
   const app = express();
