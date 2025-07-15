@@ -488,6 +488,12 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        defaultTab={authModalTab}
+      />
     </div>
   );
 }
