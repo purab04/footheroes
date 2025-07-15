@@ -28,6 +28,8 @@ class FootHeroesDatabase {
   private teamMembers: Map<string, TeamMember[]> = new Map();
   private matchParticipants: Map<string, MatchParticipant[]> = new Map();
   private matchEvents: Map<string, MatchEvent[]> = new Map();
+  private shareableLinks: Map<string, ShareableMatchLink> = new Map(); // shareCode -> link data
+  private liveMatchData: Map<string, LiveMatchData> = new Map(); // matchId -> live data
   private userSessions: Map<string, string> = new Map(); // token -> userId
 
   constructor() {
