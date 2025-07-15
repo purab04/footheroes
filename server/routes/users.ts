@@ -31,6 +31,7 @@ const updateUserSchema = z.object({
     .optional(),
   location: z.string().min(1).optional(),
   bio: z.string().optional(),
+  avatar: z.string().url().optional(),
 });
 
 // Get user by ID
