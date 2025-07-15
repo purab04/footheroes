@@ -307,11 +307,11 @@ export default function Teams() {
             </div>
             <div className="flex gap-2">
               <Select
-                value={filters.skillLevel || ""}
+                value={filters.skillLevel || "all"}
                 onValueChange={(value) =>
                   setFilters({
                     ...filters,
-                    skillLevel: value || undefined,
+                    skillLevel: value === "all" ? undefined : value,
                   })
                 }
               >
@@ -319,7 +319,7 @@ export default function Teams() {
                   <SelectValue placeholder="Skill Level" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Levels</SelectItem>
+                  <SelectItem value="all">All Levels</SelectItem>
                   <SelectItem value="beginner">Beginner</SelectItem>
                   <SelectItem value="intermediate">Intermediate</SelectItem>
                   <SelectItem value="advanced">Advanced</SelectItem>
