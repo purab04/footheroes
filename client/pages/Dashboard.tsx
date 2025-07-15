@@ -54,18 +54,34 @@ export default function Dashboard() {
     }
   }, [isAuthenticated]);
 
-  const fetchDashboardData = async () => {
+  const fetchDashboardData = async (retryCount = 0) => {
     try {
       setIsLoading(true);
+      setError(null);
       const response = await api.getDashboard();
       if (response.success && response.data) {
         setDashboardData(response.data);
       } else {
-        setError("Failed to load dashboard data");
+        throw new Error(response.error || "Failed to load dashboard data");
       }
     } catch (err) {
-      setError("Failed to connect to server");
       console.error("Dashboard error:", err);
+      const errorMessage =
+        err instanceof Error ? err.message : "Unknown error occurred";
+
+      // Retry logic for network errors
+      if (
+        retryCount < 2 &&
+        (errorMessage.includes("Network") || errorMessage.includes("fetch"))
+      ) {
+        setTimeout(
+          () => fetchDashboardData(retryCount + 1),
+          2000 * (retryCount + 1),
+        );
+        return;
+      }
+
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
