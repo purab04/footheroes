@@ -158,14 +158,16 @@ export default function Players() {
                 </SelectContent>
               </Select>
               <Select
-                value={skillLevelFilter}
-                onValueChange={setSkillLevelFilter}
+                value={skillLevelFilter || "all"}
+                onValueChange={(value) =>
+                  setSkillLevelFilter(value === "all" ? "" : value)
+                }
               >
                 <SelectTrigger className="w-40">
                   <SelectValue placeholder="Skill Level" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Levels</SelectItem>
+                  <SelectItem value="all">All Levels</SelectItem>
                   <SelectItem value="beginner">Beginner</SelectItem>
                   <SelectItem value="intermediate">Intermediate</SelectItem>
                   <SelectItem value="advanced">Advanced</SelectItem>
