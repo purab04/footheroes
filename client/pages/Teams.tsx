@@ -327,11 +327,12 @@ export default function Teams() {
                 </SelectContent>
               </Select>
               <Select
-                value={filters.isRecruiting?.toString() || ""}
+                value={filters.isRecruiting?.toString() || "all"}
                 onValueChange={(value) =>
                   setFilters({
                     ...filters,
-                    isRecruiting: value ? value === "true" : undefined,
+                    isRecruiting:
+                      value === "all" ? undefined : value === "true",
                   })
                 }
               >
@@ -339,7 +340,7 @@ export default function Teams() {
                   <SelectValue placeholder="Recruiting" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Teams</SelectItem>
+                  <SelectItem value="all">All Teams</SelectItem>
                   <SelectItem value="true">Recruiting</SelectItem>
                   <SelectItem value="false">Not Recruiting</SelectItem>
                 </SelectContent>
