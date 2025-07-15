@@ -73,6 +73,7 @@ export function createServer() {
   app.use("/api/teams", teamRoutes);
   app.use("/api/matches", matchRoutes);
   app.use("/api/users", userRoutes);
+  app.use("/api/live", liveRoutes);
 
   // Leaderboard endpoints
   app.get("/api/leaderboard", (req, res, next) => {
