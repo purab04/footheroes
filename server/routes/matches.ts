@@ -20,6 +20,7 @@ const createMatchSchema = z.object({
   scheduledAt: z.string().transform((str) => new Date(str)),
   duration: z.number().min(30).max(180),
   location: z.string().min(1),
+  gameMode: z.enum(["5v5", "7v7", "9v9", "10v10", "11v11", "custom"]),
 });
 
 const updateMatchSchema = z.object({
