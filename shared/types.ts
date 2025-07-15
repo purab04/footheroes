@@ -76,17 +76,58 @@ export interface Match {
   duration: number; // in minutes
   location: string;
   status: MatchStatus;
+  gameMode: GameMode;
   homeScore?: number;
   awayScore?: number;
   createdById: string;
   createdBy: User;
   participants: MatchParticipant[];
   events: MatchEvent[];
+  shareableLink?: string;
+  liveData?: LiveMatchData;
   createdAt: Date;
   updatedAt: Date;
 }
 
 export type MatchStatus = "scheduled" | "live" | "completed" | "cancelled";
+
+export type GameMode = "5v5" | "7v7" | "9v9" | "10v10" | "11v11" | "custom";
+
+export interface GameModeConfig {
+  mode: GameMode;
+  playersPerTeam: number;
+  fieldSize: "small" | "medium" | "large" | "full";
+  duration: number; // default duration in minutes
+  maxSubstitutions?: number;
+}
+
+export interface LiveMatchData {
+  currentMinute: number;
+  period:
+    | "first-half"
+    | "half-time"
+    | "second-half"
+    | "extra-time"
+    | "penalties";
+  isActive: boolean;
+  lastUpdate: Date;
+  possession?: {
+    home: number;
+    away: number;
+  };
+  shots?: {
+    home: number;
+    away: number;
+  };
+  corners?: {
+    home: number;
+    away: number;
+  };
+  fouls?: {
+    home: number;
+    away: number;
+  };
+}
 
 export interface MatchParticipant {
   id: string;
