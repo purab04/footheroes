@@ -29,6 +29,11 @@ import {
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authModalTab, setAuthModalTab] = useState<"login" | "register">(
+    "login",
+  );
+  const { user, isAuthenticated, logout } = useAuth();
 
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
