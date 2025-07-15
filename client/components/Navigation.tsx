@@ -2,6 +2,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { AuthModal } from "@/components/auth/AuthModal";
+import { useAuth } from "@/contexts/AuthContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Menu,
   X,
@@ -12,6 +23,8 @@ import {
   User,
   Zap,
   Target,
+  LogOut,
+  Settings,
 } from "lucide-react";
 
 export function Navigation() {
