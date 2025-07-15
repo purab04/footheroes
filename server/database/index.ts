@@ -204,6 +204,8 @@ class FootHeroesDatabase {
       | "createdBy"
       | "participants"
       | "events"
+      | "shareableLink"
+      | "liveData"
       | "createdAt"
       | "updatedAt"
     >,
