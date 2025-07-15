@@ -150,6 +150,8 @@ export interface MatchEvent {
   type: MatchEventType;
   minute: number;
   description?: string;
+  teamId: string;
+  additionalData?: Record<string, any>;
   createdAt: Date;
 }
 
@@ -158,7 +160,15 @@ export type MatchEventType =
   | "assist"
   | "yellow_card"
   | "red_card"
-  | "substitution";
+  | "substitution"
+  | "corner"
+  | "free_kick"
+  | "penalty"
+  | "offside"
+  | "foul"
+  | "save"
+  | "shot_on_target"
+  | "shot_off_target";
 
 // Stats types
 export interface PlayerStats {
