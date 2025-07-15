@@ -61,6 +61,7 @@ class ApiClient {
   private async request<T = any>(
     endpoint: string,
     options: RequestInit = {},
+    retries = 3,
   ): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
     const token = getAuthToken();
@@ -74,19 +75,61 @@ class ApiClient {
       headers["Authorization"] = `Bearer ${token}`;
     }
 
-    const response = await fetch(url, {
-      ...options,
-      headers,
-    });
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const response = await fetch(url, {
+          ...options,
+          headers,
+          timeout: 30000, // 30 second timeout
+        });
 
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({
-        error: `HTTP ${response.status}: ${response.statusText}`,
-      }));
-      throw new Error(error.error || "Network error");
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({
+            error: `HTTP ${response.status}: ${response.statusText}`,
+          }));
+
+          // Don't retry on authentication errors
+          if (response.status === 401 || response.status === 403) {
+            throw new Error(errorData.error || "Authentication failed");
+          }
+
+          // Retry on server errors
+          if (response.status >= 500 && attempt < retries) {
+            await new Promise((resolve) =>
+              setTimeout(resolve, 1000 * (attempt + 1)),
+            );
+            continue;
+          }
+
+          throw new Error(
+            errorData.error || `Request failed with status ${response.status}`,
+          );
+        }
+
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        if (attempt === retries || error instanceof TypeError) {
+          // Network error or final attempt
+          console.error(
+            `API request failed after ${attempt + 1} attempts:`,
+            error,
+          );
+          throw new Error(
+            error instanceof Error
+              ? error.message
+              : "Network connection failed",
+          );
+        }
+
+        // Wait before retry
+        await new Promise((resolve) =>
+          setTimeout(resolve, 1000 * (attempt + 1)),
+        );
+      }
     }
 
-    return response.json();
+    throw new Error("Request failed after all retries");
   }
 
   // Auth endpoints
