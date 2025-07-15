@@ -494,19 +494,41 @@ class FootHeroesDatabase {
         this.addTeamMember(team2.id, createdUsers[3].id, "defender");
       }
 
-      // Create a sample match
+      // Create sample matches with different game modes
       if (team1 && team2) {
-        const match = this.createMatch({
+        const match1 = this.createMatch({
           title: "London Lions vs Manchester United FC",
-          description: "Friendly match",
+          description: "11v11 League match",
           homeTeamId: team1.id,
           awayTeamId: team2.id,
           scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // Next week
           duration: 90,
           location: "Wembley Stadium",
           status: "scheduled",
+          gameMode: "11v11",
           createdById: createdUsers[0].id,
         });
+
+        const match2 = this.createMatch({
+          title: "Quick 7v7 Match",
+          description: "Evening 7v7 game",
+          homeTeamId: team1.id,
+          awayTeamId: team2.id,
+          scheduledAt: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000), // Day after tomorrow
+          duration: 60,
+          location: "Local Park",
+          status: "scheduled",
+          gameMode: "7v7",
+          createdById: createdUsers[1].id,
+        });
+
+        // Create shareable links for matches
+        if (match1) {
+          this.createShareableLink(match1.id, true, true);
+        }
+        if (match2) {
+          this.createShareableLink(match2.id, false, true);
+        }
       }
     }
 
