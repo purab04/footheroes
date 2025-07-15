@@ -31,6 +31,9 @@ import {
   UpdateMatchRequest,
   SearchFilters,
   MatchFilters,
+  UpdateUserProfileRequest,
+  LiveEventRequest,
+  LiveMatchData,
 } from "@shared/types";
 import { API_CONFIG, STORAGE_KEYS } from "./config";
 
