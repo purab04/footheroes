@@ -32,6 +32,11 @@ import {
 } from "lucide-react";
 
 export default function Index() {
+  const { isAuthenticated } = useAuth();
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authModalTab, setAuthModalTab] = useState<"login" | "register">(
+    "register",
+  );
   const features = [
     {
       icon: Calendar,
