@@ -71,18 +71,32 @@ export default function Matches() {
     fetchTeams();
   }, [filters]);
 
-  const fetchMatches = async () => {
+  const fetchMatches = async (retryCount = 0) => {
     try {
       setIsLoading(true);
       const response = await api.getMatches(filters);
       if (response.success && response.data) {
         setMatches(response.data);
+      } else {
+        throw new Error(response.error || "Failed to load matches");
       }
     } catch (error) {
       console.error("Failed to fetch matches:", error);
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
+
+      // Retry logic for network errors
+      if (
+        retryCount < 2 &&
+        (errorMessage.includes("Network") || errorMessage.includes("fetch"))
+      ) {
+        setTimeout(() => fetchMatches(retryCount + 1), 2000 * (retryCount + 1));
+        return;
+      }
+
       toast({
-        title: "Error",
-        description: "Failed to load matches",
+        title: "Error Loading Matches",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
