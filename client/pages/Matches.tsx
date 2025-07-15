@@ -356,11 +356,11 @@ export default function Matches() {
             </div>
             <div className="flex gap-2">
               <Select
-                value={filters.status || ""}
+                value={filters.status || "all"}
                 onValueChange={(value) =>
                   setFilters({
                     ...filters,
-                    status: (value as any) || undefined,
+                    status: value === "all" ? undefined : (value as any),
                   })
                 }
               >
@@ -368,7 +368,7 @@ export default function Matches() {
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Matches</SelectItem>
+                  <SelectItem value="all">All Matches</SelectItem>
                   <SelectItem value="scheduled">Scheduled</SelectItem>
                   <SelectItem value="live">Live</SelectItem>
                   <SelectItem value="completed">Completed</SelectItem>
